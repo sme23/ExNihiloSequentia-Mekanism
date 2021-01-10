@@ -8,8 +8,10 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.event.server.FMLServerStartingEvent;
 import novamachina.exnihilomekanism.ExNihiloMekanism;
+import novamachina.exnihilomekanism.common.utility.ExNihiloMekanismConfig;
 import novamachina.exnihilomekanism.common.utility.ExNihiloMekanismConstants;
 import novamachina.exnihilosequentia.common.item.ore.EnumOre;
+import novamachina.exnihilosequentia.common.utility.Config;
 import novamachina.exnihilosequentia.common.utility.ExNihiloLogger;
 import org.apache.logging.log4j.LogManager;
 
@@ -32,10 +34,19 @@ public class ExNihiloMekanismInitialization {
     public static void onServerStart(FMLServerStartingEvent event) {
         logger.debug("Fired FMLServerStartingEvent");
         enableOres();
+        overrideOres();
+    }
+
+    private static void overrideOres() {
+        if(Config.enableOreOverride()) {
+            ExNihiloMekanism.osmium.setEnabled(ExNihiloMekanismConfig.enableOsmium());
+        }
     }
 
     private static void enableOres() {
-        EnumOre.TIN.setEnabled();
-        EnumOre.COPPER.setEnabled();
+        EnumOre.TIN.setEnabled(true);
+        EnumOre.COPPER.setEnabled(true);
+        EnumOre.URANIUM.setEnabled(true);
+        EnumOre.LEAD.setEnabled(true);
     }
 }

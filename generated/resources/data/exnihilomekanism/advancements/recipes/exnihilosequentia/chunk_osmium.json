@@ -2,7 +2,7 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "exnihilosequentia:chunk_osmium"
+      "exnihilomekanism:chunk_osmium"
     ]
   },
   "criteria": {
@@ -19,7 +19,7 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "exnihilosequentia:chunk_osmium"
+        "recipe": "exnihilomekanism:chunk_osmium"
       }
     }
   },
