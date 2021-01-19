@@ -76,7 +76,7 @@ dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
 
     implementation fg.deobf("novamachina:exnihilosequentia:${minecraft_release}-${exnihilosequentia_version}")
-    implementation fg.deobf("mekanism:Mekanism:${minecraft_version}-${mekanism_version}")
+    implementation fg.deobf("mekanism:Mekanism:1.16.4-${mekanism_version}")
 
     runtimeOnly fg.deobf("mezz.jei:jei-${minecraft_release}.2:${jei_version}")
     runtimeOnly fg.deobf("mcp.mobius.waila:Hwyla:${hwyla_version}_${minecraft_release}.2")
@@ -158,6 +158,7 @@ if(ENV.CURSEFORGE_KEY) {
             addGameVersion '1.16.2'
             addGameVersion '1.16.3'
             addGameVersion '1.16.4'
+            addGameVersion '1.16.5'
             changelog = file('changelog.md')
             changelogType = 'markdown'
         }

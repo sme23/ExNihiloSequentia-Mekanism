@@ -2,16 +2,16 @@
   "parent": "minecraft:recipes/root",
   "rewards": {
     "recipes": [
-      "exnihilomekanism:chunk_osmium"
+      "exnihilomekanism:ens_ingot_osmium"
     ]
   },
   "criteria": {
-    "has_piece": {
+    "has_chunk": {
       "trigger": "minecraft:inventory_changed",
       "conditions": {
         "items": [
           {
-            "item": "exnihilosequentia:piece_osmium"
+            "item": "exnihilosequentia:chunk_osmium"
           }
         ]
       }
@@ -19,13 +19,13 @@
     "has_the_recipe": {
       "trigger": "minecraft:recipe_unlocked",
       "conditions": {
-        "recipe": "exnihilomekanism:chunk_osmium"
+        "recipe": "exnihilomekanism:ens_ingot_osmium"
       }
     }
   },
   "requirements": [
     [
-      "has_piece",
+      "has_chunk",
       "has_the_recipe"
     ]
   ]
