@@ -7,9 +7,4 @@ public class ExNihiloMekanismConstants {
         private ModIds() {
         }
     }
-
-    public class Blocks {
-        private Blocks() {
-        }
-    }
 }
