@@ -31,8 +31,8 @@ An addon for Ex Nihilo: Sequentia that adds support for Mekanism.
 [[dependencies.exnihilomekanism]]
     modId="exnihilosequentia"
     mandatory=true
-    versionRange="[1.16-1.4.0.0, )"
-    ordering="AFTER"
+    versionRange="[1.16-2.0.0.0, )"
+    ordering="BEFORE"
     side="BOTH"
 [[dependencies.exnihilomekanism]]
     modId="mekanism"
