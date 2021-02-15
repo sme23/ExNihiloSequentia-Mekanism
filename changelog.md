@@ -1,2 +1,2 @@
-1.0.0.0
-- Add osmium ore and recipes
+1.0.0.1
+- Fix dependency loading order
