@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "exnihilosequentia:chunk_osmium"
+  },
+  "result": "mekanism:ingot_osmium",
+  "experience": 0.7,
+  "cookingtime": 200
+}
