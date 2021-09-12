@@ -16,27 +16,15 @@ authors="NovaMachina" #optional
 description='''
 An addon for Ex Nihilo: Sequentia that adds support for Mekanism.
 '''
-[[dependencies.exnihilomekanism]] #optional
-    modId="forge" #mandatory
-    mandatory=true #mandatory
-    versionRange="[32,)" #mandatory
-    ordering="NONE"
-    side="BOTH"
-[[dependencies.exnihilomekanism]]
-    modId="minecraft"
-    mandatory=true
-    versionRange="[1.16, )"
-    ordering="NONE"
-    side="BOTH"
 [[dependencies.exnihilomekanism]]
     modId="exnihilosequentia"
     mandatory=true
-    versionRange="[1.16-2.0.0.0, )"
+    versionRange="[1.16-2.0.2.8, )"
     ordering="BEFORE"
     side="BOTH"
 [[dependencies.exnihilomekanism]]
     modId="mekanism"
     mandatory=true
-    versionRange="[1.16.4-10.0.18.445, )"
+    versionRange="[1.16.5-10.0.21.448, )"
     ordering="AFTER"
     side="BOTH"

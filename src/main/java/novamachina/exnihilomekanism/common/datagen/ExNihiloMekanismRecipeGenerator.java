@@ -10,7 +10,6 @@ import novamachina.exnihilomekanism.common.utility.ExNihiloMekanismConstants;
 import novamachina.exnihilosequentia.api.crafting.sieve.MeshWithChance;
 import novamachina.exnihilosequentia.api.crafting.sieve.SieveRecipeBuilder;
 import novamachina.exnihilosequentia.api.datagen.AbstractRecipeGenerator;
-import novamachina.exnihilosequentia.common.init.ExNihiloBlocks;
 import novamachina.exnihilosequentia.common.item.mesh.EnumMesh;
 
 import java.util.function.Consumer;
@@ -21,7 +20,7 @@ public class ExNihiloMekanismRecipeGenerator extends AbstractRecipeGenerator {
     }
 
     @Override
-    protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
+    protected void buildShapelessRecipes(Consumer<IFinishedRecipe> consumer) {
         registerSmelting(ExNihiloMekanism.osmium, consumer);
         registerOre(ExNihiloMekanism.osmium, consumer);
         registerSieve(consumer);
@@ -29,21 +28,21 @@ public class ExNihiloMekanismRecipeGenerator extends AbstractRecipeGenerator {
 
     private void registerSieve(Consumer<IFinishedRecipe> consumer) {
         SieveRecipeBuilder.builder()
-            .input(Ingredient.fromItems(Blocks.GRAVEL))
+            .input(Ingredient.of(Blocks.GRAVEL))
             .drop(ExNihiloMekanism.osmium.getPieceItem().get())
             .addRoll(new MeshWithChance(EnumMesh.IRON, 0.05F))
             .addRoll(new MeshWithChance(EnumMesh.DIAMOND, 0.1F))
             .build(consumer, sieveLoc(ExNihiloMekanism.osmium.getPieceName() + "_1"));
 
         SieveRecipeBuilder.builder()
-            .input(Ingredient.fromItems(Blocks.GRAVEL))
+            .input(Ingredient.of(Blocks.GRAVEL))
             .drop(MekanismItems.FLUORITE_GEM.getItem())
             .addRoll(new MeshWithChance(EnumMesh.IRON, 0.025F))
             .addRoll(new MeshWithChance(EnumMesh.DIAMOND, 0.05F))
             .build(consumer, sieveLoc(ExNihiloMekanism.osmium.getPieceName() + "_2"));
 
         SieveRecipeBuilder.builder()
-            .input(Ingredient.fromItems(Blocks.SAND))
+            .input(Ingredient.of(Blocks.SAND))
             .drop(MekanismItems.SALT.getItem())
             .addRoll(new MeshWithChance(EnumMesh.FLINT, 0.01F))
             .addRoll(new MeshWithChance(EnumMesh.IRON, 0.02F))
