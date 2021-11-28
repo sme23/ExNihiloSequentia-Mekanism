@@ -13,8 +13,9 @@ public class ExNihiloMekanismItemTagGenerator extends AbstractItemTagGenerator {
         super(generator, blockTagsProvider, ExNihiloMekanismConstants.ModIds.EX_NIHILO_MEKANISM, existingFileHelper);
     }
 
+
     @Override
-    protected void registerTags() {
+    protected void addTags() {
         registerOre(ExNihiloMekanism.osmium, new ExNihiloTags.OreTag(ExNihiloMekanism.osmium));
     }
 }
